@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import './index.scss';
+
+.crd-cont {
+    box-sizing: border-box;
+    background-color: $Bright_orange;
+    color: $Very_light_gray;
+    width: 270px;
+    height: 420px;
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .crd-cont_info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 70%;
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: 'Big Shoulders Display', sans-serif;
+        }
+
+        p {
+            font-size: .9rem;
+            line-height: 1.4rem;
+            font-weight: 400;
+            color: hsla(0, 0%, 100%, 0.75);
+        }
+    }
+
+    button {
+        width: 132px;
+        padding: 13px;
+        border: none;
+        border-radius: 32px;
+        color: $Bright_orange;
+        cursor: pointer;
+    }
+    
+}
