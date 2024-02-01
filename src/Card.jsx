@@ -1,18 +1,26 @@
 import './Card.scss'
+import { SedanImg } from './SedanImg';
 
-export function Card (bgColor, carName, carImg, description) {
+export function Card ({bgColor}) {
+
+    const cardStyle = {
+        backgroundColor: bgColor,
+    }
+    const buttonColor = {
+        color: bgColor
+    }
 
     return (
-        <section className="crd-cont" style={{background: bgColor}}>
+        <section className="crd-cont" style={cardStyle}>
             <div className='crd-cont_info'>
-                {carImg}
-                <h2>{carName}</h2>
+                <SedanImg />
+                <h2>SEDANS</h2>
                 <p>
-                    {description}
+                    Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.
                 </p>
             </div>
             
-            <button>Learn More</button>
+            <button style={buttonColor}>Learn More</button>
         </section>        
     );
 }
