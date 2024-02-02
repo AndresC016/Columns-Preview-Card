@@ -1,7 +1,7 @@
 import './Card.scss'
-import { SedanImg } from './SedanImg';
 
-export function Card ({bgColor}) {
+export function Card ({bgColor, carImage, carName, description, isSurrounded}) {
+
 
     const cardStyle = {
         backgroundColor: bgColor,
@@ -10,13 +10,23 @@ export function Card ({bgColor}) {
         color: bgColor
     }
 
+    if(isSurrounded === 'left') {
+        cardStyle.borderTopLeftRadius = '8px'
+        cardStyle.borderBottomLeftRadius = '8px'
+    } else if(isSurrounded === 'right') {
+        cardStyle.borderTopRightRadius = '8px'
+        cardStyle.borderBottomRightRadius = '8px'
+    } else if(isSurrounded === 'middle') {
+        cardStyle.borderRadius = '0'
+    } 
+
     return (
         <section className="crd-cont" style={cardStyle}>
             <div className='crd-cont_info'>
-                <SedanImg />
-                <h2>SEDANS</h2>
+                {carImage}
+                <h2>{carName}</h2>
                 <p>
-                    Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.
+                    {description}
                 </p>
             </div>
             

@@ -7,7 +7,6 @@
     width: 270px;
     height: 420px;
     padding: 40px;
-    border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -41,4 +40,11 @@
         cursor: pointer;
     }
     
+}
+
+@media(max-width: 756px) {
+    .crd-cont {
+        width: 300px;
+        border-radius: 8px;
+    }
 }
